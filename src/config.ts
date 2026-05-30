@@ -1,6 +1,6 @@
-// Always use same-origin `/api` so localhost and Render both rely on routing
-// instead of hardcoding the backend host into the browser bundle.
-export const API_BASE_URL = "";
+// Use Vite environment variable `VITE_API_BASE_URL` when provided.
+// If not set, default to same-origin (empty string) so SPA rewrite can proxy calls.
+const API_BASE_URL = (import.meta as any).env?.VITE_API_BASE_URL ?? "";
 
 export const apiUrl = (path: string) => {
   const normalizedPath = path.startsWith("/") ? path : `/${path}`;
