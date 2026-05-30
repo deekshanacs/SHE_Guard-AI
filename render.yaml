@@ -22,4 +22,4 @@ services:
     routes:
       - type: rewrite
         source: /api/*
-        destination: http://sheguard-api/*
+        destination: https://sheguard-api.onrender.com/*
