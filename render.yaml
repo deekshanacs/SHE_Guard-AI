@@ -14,7 +14,7 @@ services:
         value: /opt/render/project/src/backend/forensic_ai/outputs/checkpoints
 
   # Frontend React Static Site (Free Tier)
-  - type: static
+  - type: web
     name: sheguard-app
     runtime: static
     buildCommand: "npm install && npm run build"
